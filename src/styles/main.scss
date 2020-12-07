@@ -1,7 +1,72 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+@font-face {
+  font-family: "Druk Cyr";
+  src: url("../fonts/DrukCyr-Medium.eot");
+  src: local("../fonts/Druk Cyr Medium"),
+    local("../fonts/DrukCyr-Medium"),
+    url("../fonts/DrukCyr-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/DrukCyr-Medium.woff2") format("woff2"),
+    url("../fonts/DrukCyr-Medium.woff") format("woff"),
+    url("../fonts/DrukCyr-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-  background: $c-gray;
+  font-family: "Druk Cyr";
+  margin: 0;
+}
+
+.container {
+  max-width: 700px;
+  height: 1920px;
+  margin: 0 auto;
+  padding: 80px 40px 0;
+  background: url("images/сАЙТ.jpg") no-repeat;
+}
+
+.heading {
+  text-align: center;
+  font-size: 66px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+
+.event {
+  padding: 10px 20px;
+  margin-bottom: 50px;
+  border: 20px solid black;
+  text-align: center;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+
+  .heading {
+    font-size: 40px;
+  }
+
+  .event {
+    border: 10px solid;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .heading {
+    font-size: 25px;
+    letter-spacing: 0.2em;
+  }
+
+  .event {
+    font-size: 18px;
+    border: 5px solid;
+  }
 }
